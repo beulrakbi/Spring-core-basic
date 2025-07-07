@@ -1,8 +1,12 @@
 package hello.core.discount;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy{
     /*
     * 기획자가 할인을 1000원 고정으로 하지 않고
